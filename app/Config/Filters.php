@@ -24,6 +24,8 @@ class Filters extends BaseConfig
 		'after'  => [
 			'authfilter' => ['except' => [
 				'home', 'home/*',
+				'kategori', 'kategori/*',
+				'departement', 'departement/*',
 			]],
 			'toolbar',
 			//'honeypot'
