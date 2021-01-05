@@ -8,6 +8,11 @@ class UserModel extends Model
    protected $primaryKey = 'id_user';
    protected $allowedFields = ['nama_user', 'email', 'password', 'role', 'id_dep'];
 
+   public function countTBAll($table)
+   {
+      return $this->db->table($table)->countAll();
+   }
+
    public function getJoinDep()
    {
       return $this->db->table('user')

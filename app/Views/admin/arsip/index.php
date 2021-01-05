@@ -58,6 +58,7 @@
                            <td><?= $a['nama_dep']; ?></td>
                            <td><?= $a['nama_user']; ?></td>
                            <td>
+                              <a href="/arsip/viewPdf/<?= $a['id_arsip']; ?>">PDF</a>
                               <a href="/arsip/edit/<?= $a['id_arsip']; ?>" class="btn btn-primary float-right btn-sm">
                                 <i class="fas fa-edit"></i>
                               </a>

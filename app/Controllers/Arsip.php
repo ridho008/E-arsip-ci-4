@@ -185,6 +185,16 @@ class Arsip extends BaseController
       return redirect('')->to('/catatan');
    }
 
+   public function viewPdf($id_arsip)
+   {
+      $data = [
+         'title' => 'View Arsip PDF',
+         'arsip' => $this->arsipModel->getJoinDepUserKateById($id_arsip),
+         'validation' => \Config\Services::validation()
+      ];
+      return view('admin/arsip/view_pdf', $data);
+   }
+
 	//--------------------------------------------------------------------
 
 }

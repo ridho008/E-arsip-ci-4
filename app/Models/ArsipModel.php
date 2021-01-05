@@ -17,6 +17,17 @@ class ArsipModel extends Model
             ->get()->getResultArray();
    }
 
+   // berdasrkan id arsip
+   public function getJoinDepUserKateById($id_arsip)
+   {
+      return $this->db->table('arsip')
+            ->join('departement', 'departement.id_dep = arsip.id_dep', 'left')
+            ->join('kategori', 'kategori.id_kategori = arsip.id_kategori', 'left')
+            ->join('user', 'user.id_user = arsip.id_user', 'left')
+            ->where('arsip.id_arsip', $id_arsip)
+            ->get()->getRowArray();
+   }
+
    public function getSessionLogin()
    {
       return $this->db->table('user')
