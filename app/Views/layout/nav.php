@@ -17,10 +17,16 @@
             <a href="index3.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
+            <a href="/catatan" class="nav-link">Arsip</a>
+          </li>
+          <li class="nav-item">
             <a href="/kategori" class="nav-link">Kategori</a>
           </li>
           <li class="nav-item">
             <a href="/departement" class="nav-link">Departement</a>
+          </li>
+          <li class="nav-item">
+            <a href="/user" class="nav-link">User</a>
           </li>
           <li class="nav-item dropdown">
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>

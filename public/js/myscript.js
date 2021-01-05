@@ -46,7 +46,7 @@ $(function() {
       $('#departement').val('');
    });
 
-   // Button Ubah Kategori
+   // Button Ubah Departement
    $('.buttonEditDep').click(function() {
       $('#exampleModalLabelDep').html('Edit Departement');
       $('.modal-footer button[type=submit]').html('Edit');
@@ -64,6 +64,44 @@ $(function() {
             // console.log(departement);
             $('#id_dep').val(departement.id_dep);
             $('#departement').val(departement.nama_dep);
+         }
+      });
+
+   });
+
+
+   // Button Tambah User
+   $('#buttonTambahUser').click(function() {
+      $('#exampleModalLabelUser').html('Tambah User');
+      $('.modal-footer button[type=submit]').html('Tambah');
+      $('#id_user').val('');
+      $('#nama').val('');
+      $('#email').val('');
+      $('#role').val('');
+      $('#departement').val('');
+   });
+
+   // Button Ubah Departement
+   $('.buttonEditUser').click(function() {
+      $('#exampleModalLabelUser').html('Edit User');
+      $('.modal-footer button[type=submit]').html('Edit');
+      $('.modal-body form').attr('action', 'http://localhost:8080/user/edit')
+
+      const id = $(this).data('id');
+      // console.log(id);
+
+      $.ajax({
+         url: 'http://localhost:8080/user/getUser',
+         method: 'post',
+         dataType: 'json',
+         data : {id: id},
+         success: function(data) {
+            // console.log(data);
+            $('#id_user').val(data.id_user);
+            $('#nama').val(data.nama_user);
+            $('#email').val(data.email);
+            $('#role').val(data.role);
+            $('#departement').val(data.id_dep);
          }
       });
 

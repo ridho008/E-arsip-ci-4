@@ -26,6 +26,8 @@ class Filters extends BaseConfig
 				'home', 'home/*',
 				'kategori', 'kategori/*',
 				'departement', 'departement/*',
+				'user', 'user/*',
+				'catatan', 'arsip/*',
 			]],
 			'toolbar',
 			//'honeypot'
